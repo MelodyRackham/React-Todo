@@ -1,6 +1,7 @@
 import React from 'react';
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
+import './Todo.css';
 
 class App extends React.Component {
   constructor() {
@@ -12,8 +13,9 @@ class App extends React.Component {
           id: 123,
           completed: false,
         },
+
         {
-          task: 'clean the kitchen',
+          task: 'sweep the floor',
           id: 321,
           completed: false,
         },
@@ -21,9 +23,7 @@ class App extends React.Component {
       todo: '',
     };
   }
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
+
   addTodo = e => {
     e.preventDefault();
     const newTodo = { task: this.state.todo, completed: false, id: Date.now() };
@@ -56,7 +56,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
+        <h1> My Daily To Do List</h1>
         <TodoList handleToggleComplete={this.toggleTodoComplete} todos={this.state.todos} />
         <TodoForm
           value={this.state.todo}

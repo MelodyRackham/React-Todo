@@ -1,0 +1,18 @@
+* {
+  background-color: lightblue;
+  font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+h1 {
+  font-size: 3rem;
+  color: purple;
+}
+
+.container {
+  text-align: center;
+}
+
+button {
+  background-color: lightslategray;
+  border-radius: 100px;
+}
